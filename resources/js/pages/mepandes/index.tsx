@@ -43,7 +43,7 @@ function Index() {
                 <div className="hidden lg:flex lg:w-1/4 lg:items-center lg:justify-center relative">
                     <img
                         src={Mandala}
-                        alt=""
+                        alt="mandala"
                         className="
                         scale-300
                         animate-spin-slow
@@ -58,7 +58,7 @@ function Index() {
                 '>
                     <img
                         src={Mandala}
-                        alt=""
+                        alt="mandala"
                         className="
                         scale-150 md:scale-100
                         animate-spin-slow
@@ -80,7 +80,7 @@ function Index() {
                 <div className='relative top-[30%] flex flex-col items-center gap-4 md:gap-2 px-3 lg:px-8 md:w-[80%] mx-auto
                 md:top-[25%]
                 lg:mx-0 lg:self-center lg:top-0 lg:w-3/4'>
-                    <img src={TopMandala} alt="" className='w-full lg:w-2/3'/>
+                    <img src={TopMandala} alt="top mandala" className='w-full lg:w-2/3'/>
                     <header className='text-center flex flex-col items-center'>
                         <h1 className='h1 font-secondary text-2xl tracking-[.35em] capitalize text-light-gold relative bottom-[-1.25rem]
                         lg:bottom-[-1.75rem]'>
@@ -88,7 +88,7 @@ function Index() {
                         </h1>
                         <p className='font-cursive text-9xl lg:text-[15rem] xs capitalize text-gold'>mepandes</p>
                     </header>
-                    <img src={BottomMandala} alt="" className='w-1/2 lg:w-[35%]' />
+                    <img src={BottomMandala} alt="bottom mandala" className='w-1/2 lg:w-[35%]' />
                 </div>
                 
                 <div 
@@ -110,7 +110,8 @@ function Index() {
                     {/* ${isSection2Visible ? 'scale-100 md:scale-75' : 'scale-210 md:scale-110'} */}
                     <img
                         src={Mandala}
-                        alt=""
+                        alt="mandala"
+                        loading='lazy'
                         className={`
                         scale-75 md:scale-40
                         lg:hidden
@@ -172,7 +173,8 @@ function Index() {
                 <div className="hidden lg:flex lg:w-1/4 lg:items-center lg:justify-center relative">
                     <img
                         src={Mandala}
-                        alt=""
+                        alt="mandala"
+                        loading='lazy'
                         className="scale-300 translate-x-[95%] 
                         animate-spin-slow
                         transition-transform duration-700 ease-in-out"
