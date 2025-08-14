@@ -18,29 +18,8 @@ function Index() {
                 className='flex flex-col gap-10 py-8 h-screen snap-start relative
                 lg:flex-row lg:w-full lg:overflow-hidden'
             >
-                {/* GAMBAR MANDALA KHUSUS DESKTOP (muncul di kiri) */}
-                <div className="hidden lg:flex lg:w-1/4 lg:items-center lg:justify-center relative">
-                    <motion.img
-                        src={Mandala}
-                        alt=""
-                        width={1130.73}
-                        height={1130.74}
-                        className="
-                        scale-300
-                        translate-x-[-95%]"
-
-                        animate={{ rotate: 360 }}
-                        transition={{ 
-                            duration: 30,
-                            ease: "linear",
-                            repeat: Infinity
-                        }}
-                    />
-                </div>
-
-                {/* GAMBAR MANDALA KHUSUS MOBILE (yang absolute, sembunyi di desktop) */}
                 <div 
-                className='absolute top-0 inset-x-0 flex justify-center lg:hidden
+                className='absolute lg:relative top-0 inset-x-0 flex justify-center lg:flex lg:w-1/4 lg:items-center 
                 '>
                     <motion.img
                         src={Mandala}
@@ -48,8 +27,8 @@ function Index() {
                         width={1130.73}
                         height={1130.74}
                         className="
-                        scale-150 md:scale-100
-                        translate-y-[-75%]"
+                        scale-150 md:scale-100 lg:scale-300
+                        translate-y-[-75%] lg:translate-y-0 lg:translate-x-[-95%]"
 
                         animate={{ rotate: 360 }}
                         transition={{ 
@@ -98,8 +77,8 @@ function Index() {
             </section>
 
             <section ref={section2Ref} className='flex h-screen snap-start relative py-8
-            lg:flex-row lg:w-full lg:overflow-hidden'>
-                <div className='absolute top-0 inset-x-0 flex justify-center'>
+            lg:flex-row-reverse lg:w-full lg:overflow-hidden'>
+                <div className='absolute lg:relative top-0 inset-x-0 flex justify-center lg:w-1/4 lg:items-center'>
                     <motion.img
                         src={Mandala}
                         alt=""
@@ -107,9 +86,8 @@ function Index() {
                         height={1130.74}
                         loading='lazy'
                         className={`
-                        scale-75 md:scale-40
-                        lg:hidden
-                        translate-y-[-50%]`}
+                        scale-75 md:scale-40 lg:scale-300
+                        translate-y-[-50%] lg:translate-x-[95%] lg:translate-y-0`}
 
                         animate={{ rotate: 360 }}
                         transition={{ 
@@ -163,25 +141,6 @@ function Index() {
                             Buka Peta Lokasi
                         </a>
                     </div>
-                </div>
-
-                {/* GAMBAR MANDALA KHUSUS DESKTOP (muncul di kanan) */}
-                <div className="hidden lg:flex lg:w-1/4 lg:items-center lg:justify-center relative">
-                    <motion.img
-                        src={Mandala}
-                        alt=""
-                        width={1130.73}
-                        height={1130.74}
-                        loading='lazy'
-                        className="scale-300 translate-x-[95%]"
-
-                        animate={{ rotate: 360 }}
-                        transition={{ 
-                            duration: 30,
-                            ease: "linear",
-                            repeat: Infinity
-                        }}
-                    />
                 </div>
             </section>
         </div>
