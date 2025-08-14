@@ -1,6 +1,5 @@
 import { MapPin } from 'lucide-react'
 import React, {  useRef } from 'react'
-// import { useEffect, useState } from 'react'
 import Mandala from '../../../assets/images/mandala.svg';
 import TopMandala from '../../../assets/images/mandala-atas.svg';
 import BottomMandala from '../../../assets/images/mandala-bawah.svg';
@@ -11,27 +10,6 @@ function Index() {
     const handleScroll = () => {
         section2Ref.current?.scrollIntoView({behavior: 'smooth'})
     }
-    //     const observer = new IntersectionObserver(
-    //         (entries) => {
-    //             const entry = entries[0];
-    //             setIsSection2Visible(entry.isIntersecting);
-    //         },
-    //         {
-    //             threshold: 0.5
-    //         }
-    //     );
-
-    //     if (section2Ref.current) {
-    //         observer.observe(section2Ref.current);
-    //     }
-
-    //     // Cleanup observer saat komponen di-unmount
-    //     return () => {
-    //         if (section2Ref.current) {
-    //             observer.unobserve(section2Ref.current);
-    //         }
-    //     };
-    // }, []);
 
     return (
         <div className='w-full h-screen px-4 lg:px-0 bg-background overflow-y-scroll scrollbar-hidden scroll-smooth snap-y snap-mandatory relative overflow-x-hidden'>
@@ -65,16 +43,6 @@ function Index() {
                         translate-y-[-75%]
                         transition-transform duration-700 ease-in-out"
                     />
-                    {/* ${isSection2Visible ? 'scale-100 md:scale-75' : 'scale-210 md:scale-110'} */}
-                    {/* <img
-                        src={Mandala}
-                        alt=""
-                        className={`
-                        scale-150 md:scale-100 lg:scale-75
-                        translate-y-[-75%] md:translate-y-[-70%] lg:translate-y-0 lg:translate-x-[-50%]
-                        animate
-                        transition-transform duration-700 ease-in-out`}
-                    /> */}
                 </div>
 
                 <div className='relative top-[30%] flex flex-col items-center gap-4 md:gap-2 px-3 lg:px-8 md:w-[80%] mx-auto
