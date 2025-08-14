@@ -44,7 +44,13 @@
         @vite(['resources/js/app.tsx', "resources/js/pages/{$page['component']}.tsx"])
         @inertiaHead
     </head>
-    <body class="font-sans antialiased">
+    <body class="flex flex-col font-sans antialiased">
         @inertia
     </body>
+    {{-- <footer class="mt-auto text-center py-0.5 text-sm text-gray-500 dark:text-gray-400">
+        <p>
+            © {{ date('Y') }} {{ config('app.name', 'Laravel') }}.
+            Made by <a href="https://eivern.com/" target="_blank" rel="noopener noreferrer" class="text-gold">Eivern</a>.
+        </p>
+    </footer> --}}
 </html>
