@@ -2,6 +2,7 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import laravel from 'laravel-vite-plugin';
 import { resolve } from 'node:path';
+import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
@@ -13,6 +14,7 @@ export default defineConfig({
         }),
         react(),
         tailwindcss(),
+        visualizer({ open: true }),
     ],
     esbuild: {
         jsx: 'automatic',
