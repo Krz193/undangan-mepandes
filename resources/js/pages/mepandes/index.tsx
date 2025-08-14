@@ -1,8 +1,8 @@
 import { MapPin } from 'lucide-react'
 import React, {  useRef } from 'react'
-import Mandala from '../../../assets/images/mandala.svg';
-import TopMandala from '../../../assets/images/mandala-atas.svg';
-import BottomMandala from '../../../assets/images/mandala-bawah.svg';
+import Mandala from '../../../assets/images/mandala-compressed.svg';
+import TopMandala from '../../../assets/images/mandala-atas-compressed.svg';
+import BottomMandala from '../../../assets/images/mandala-bawah-compressed.svg';
 import { ArrowDown } from 'lucide-react';
 
 function Index() {
