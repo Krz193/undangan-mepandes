@@ -117,7 +117,7 @@ function Index() {
 
                     <div className='lg:flex lg:flex-col-reverse lg:justify-center lg:items-center lg:gap-8 lg:w-full'>
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3944.4005056354245!2d115.18793671141776!3d-8.653404991357771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMzknMTIuMyJTIDExNcKwMTEnMjUuOSJF!5e0!3m2!1sen!2sid!4v1755165350951!5m2!1sen!2sid"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.5249838372115!2d115.19046730161818!3d-8.653477934656491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd240aae9a1ad53%3A0x2d5d41e26ca0d464!2sGg.%20IV%20A%20No.1%2C%20Padangsambian%2C%20Kec.%20Denpasar%20Bar.%2C%20Kota%20Denpasar%2C%20Bali%2080117!5e0!3m2!1sen!2sid!4v1755188630656!5m2!1sen!2sid"
                             className='hidden lg:block rounded-lg w-3/4 h-[240px]'
                             loading="lazy"
                             allowFullScreen
@@ -139,7 +139,7 @@ function Index() {
                     
                     <div className='lg:hidden'>
                         <a
-                            href="https://maps.app.goo.gl/8L8VfWYYfHC7ovnu7"
+                            href="https://maps.app.goo.gl/nkcdCDbcR2YoCpE79"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="mt-4 inline-flex items-center justify-center px-6 py-3 bg-gold text-black rounded-lg"
