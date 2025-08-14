@@ -4,6 +4,7 @@ import Mandala from '../../../assets/images/mandala-compressed.svg';
 import TopMandala from '../../../assets/images/mandala-atas-compressed.svg';
 import BottomMandala from '../../../assets/images/mandala-bawah-compressed.svg';
 import { ArrowDown } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 function Index() {
     const section2Ref = useRef<HTMLElement>(null);
@@ -19,16 +20,21 @@ function Index() {
             >
                 {/* GAMBAR MANDALA KHUSUS DESKTOP (muncul di kiri) */}
                 <div className="hidden lg:flex lg:w-1/4 lg:items-center lg:justify-center relative">
-                    <img
+                    <motion.img
                         src={Mandala}
                         alt=""
                         width={1130.73}
                         height={1130.74}
                         className="
                         scale-300
-                        animate-spin-slow
-                        translate-x-[-95%]
-                        transition-transform duration-700 ease-in-out "
+                        translate-x-[-95%]"
+
+                        animate={{ rotate: 360 }}
+                        transition={{ 
+                            duration: 30,
+                            ease: "linear",
+                            repeat: Infinity
+                        }}
                     />
                 </div>
 
@@ -36,16 +42,21 @@ function Index() {
                 <div 
                 className='absolute top-0 inset-x-0 flex justify-center lg:hidden
                 '>
-                    <img
+                    <motion.img
                         src={Mandala}
                         alt=""
                         width={1130.73}
                         height={1130.74}
                         className="
                         scale-150 md:scale-100
-                        animate-spin-slow
-                        translate-y-[-75%]
-                        transition-transform duration-700 ease-in-out"
+                        translate-y-[-75%]"
+
+                        animate={{ rotate: 360 }}
+                        transition={{ 
+                            duration: 30,
+                            ease: "linear",
+                            repeat: Infinity
+                        }}
                     />
                 </div>
 
@@ -89,8 +100,7 @@ function Index() {
             <section ref={section2Ref} className='flex h-screen snap-start relative py-8
             lg:flex-row lg:w-full lg:overflow-hidden'>
                 <div className='absolute top-0 inset-x-0 flex justify-center'>
-                    {/* ${isSection2Visible ? 'scale-100 md:scale-75' : 'scale-210 md:scale-110'} */}
-                    <img
+                    <motion.img
                         src={Mandala}
                         alt=""
                         width={1130.73}
@@ -99,9 +109,14 @@ function Index() {
                         className={`
                         scale-75 md:scale-40
                         lg:hidden
-                        translate-y-[-50%]
-                        animate-spin-slow
-                        transition-transform duration-700 ease-in-out`}
+                        translate-y-[-50%]`}
+
+                        animate={{ rotate: 360 }}
+                        transition={{ 
+                            duration: 30,
+                            ease: "linear",
+                            repeat: Infinity
+                        }}
                     />
                 </div>
 
@@ -148,22 +163,24 @@ function Index() {
                             Buka Peta Lokasi
                         </a>
                     </div>
-                    {/* <section className='flex justify-center w-full'>
-                        <img src={BottomMandala} alt="" className='w-3/4' />
-                    </section> */}
                 </div>
 
                 {/* GAMBAR MANDALA KHUSUS DESKTOP (muncul di kanan) */}
                 <div className="hidden lg:flex lg:w-1/4 lg:items-center lg:justify-center relative">
-                    <img
+                    <motion.img
                         src={Mandala}
                         alt=""
                         width={1130.73}
                         height={1130.74}
                         loading='lazy'
-                        className="scale-300 translate-x-[95%] 
-                        animate-spin-slow
-                        transition-transform duration-700 ease-in-out"
+                        className="scale-300 translate-x-[95%]"
+
+                        animate={{ rotate: 360 }}
+                        transition={{ 
+                            duration: 30,
+                            ease: "linear",
+                            repeat: Infinity
+                        }}
                     />
                 </div>
             </section>

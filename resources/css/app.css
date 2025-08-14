@@ -22,15 +22,6 @@
     font-display: swap;
 }
 
-@layer utilities {
-    .animate-spin-slow {
-        animation: spin 45s linear infinite;
-    }
-    .animate-spin-very-slow {
-        animation: spin 60s linear infinite;
-    }
-}
-
 @theme {
     --font-cursive: 'passion', serif;
     --font-secondary: 'didone', sans-serif;
