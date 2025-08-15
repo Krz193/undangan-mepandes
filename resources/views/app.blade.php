@@ -4,7 +4,18 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="preload" href={{ Vite::asset('resources/assets/images/mandala-compressed.svg') }} as="image">
+        <link rel="preload"
+            href={{ Vite::asset('resources/assets/fonts/PassionsConflict-Regular.woff2') }}
+            as="font"
+            type="font/woff2"
+            crossorigin
+        >
+        <link rel="preload"
+            href={{ Vite::asset('resources/assets/fonts/AnticDidone-Regular.woff2') }}
+            as="font"
+            type="font/woff2"
+            crossorigin
+        >
 
         {{-- Inline script to detect system dark mode preference and apply it immediately --}}
         <script>

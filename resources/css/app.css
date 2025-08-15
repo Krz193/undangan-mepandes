@@ -9,14 +9,14 @@
 
 @font-face {
     font-family: 'passion';
-    src: url('../assets/fonts/PassionsConflict-Regular.ttf') format('truetype');
+    src: url('../assets/fonts/PassionsConflict-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'didone';
-    src: url('../assets/fonts/AnticDidone-Regular.ttf') format('truetype');
+    src: url('../assets/fonts/AnticDidone-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
