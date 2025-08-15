@@ -1,16 +1,19 @@
 import { MapPin } from 'lucide-react'
 import React, {  useRef } from 'react'
-import Mandala from '../../../assets/images/mandala-compressed.svg';
-import TopMandala from '../../../assets/images/mandala-atas-compressed.svg';
-import BottomMandala from '../../../assets/images/mandala-bawah-compressed.svg';
+import Mandala from '@/components/mandala';
+import MandalaAtas from '@/components/mandala-atas';
+import MandalaBawah from '@/components/mandala-bawah';
 import { ArrowDown } from 'lucide-react';
 import { motion } from 'framer-motion';
+
+const MotionMandala = motion.create(Mandala);
 
 function Index() {
     const section2Ref = useRef<HTMLElement>(null);
     const handleScroll = () => {
         section2Ref.current?.scrollIntoView({behavior: 'smooth'})
     }
+
 
     return (
         <div className='w-full h-screen px-4 lg:px-0 bg-background overflow-y-scroll scrollbar-hidden scroll-smooth snap-y snap-mandatory relative overflow-x-hidden'>
@@ -21,15 +24,11 @@ function Index() {
                 <div 
                 className='absolute lg:relative top-0 inset-x-0 flex justify-center lg:flex lg:w-1/4 lg:items-center 
                 '>
-                    <motion.img
-                        src={Mandala}
-                        alt=""
-                        width={1130.73}
-                        height={1130.74}
+                    <MotionMandala
                         className="
-                        scale-150 md:scale-100 lg:scale-300
-                        translate-y-[-75%] lg:translate-y-0 lg:translate-x-[-95%]"
-
+                            scale-150 md:scale-100 lg:scale-300
+                            translate-y-[-75%] lg:translate-y-0 lg:translate-x-[-95%]"
+                        
                         animate={{ rotate: 360 }}
                         transition={{ 
                             duration: 30,
@@ -42,12 +41,10 @@ function Index() {
                 <div className='relative top-[30%] flex flex-col items-center gap-4 md:gap-2 px-3 lg:px-8 md:w-[80%] mx-auto
                 md:top-[25%]
                 lg:mx-0 lg:self-center lg:top-0 lg:w-3/4'>
-                    <img 
-                    src={TopMandala}
-                    alt="Pembatas mandala bawah"
-                    width={1004}
-                    height={241.82}
-                    className='w-full lg:w-2/3'/>
+                    <MandalaAtas
+                        className='w-full lg:w-2/3'
+                    />
+
                     <header className='text-center flex flex-col items-center'>
                         <h1 className='h1 font-secondary text-2xl tracking-[.35em] capitalize text-light-gold relative bottom-[-1.25rem]
                         lg:bottom-[-1.75rem]'>
@@ -55,12 +52,9 @@ function Index() {
                         </h1>
                         <p className='font-cursive text-9xl lg:text-[15rem] xs capitalize text-gold'>mepandes</p>
                     </header>
-                    <img
-                    src={BottomMandala}
-                    alt="Pembatas mandala bawah"
-                    width={812.9}
-                    height={204.21}
-                    className='w-1/2 lg:w-[35%]' />
+                    <MandalaBawah
+                        className='w-1/2 lg:w-[35%]'
+                    />
                 </div>
                 
                 <div 
@@ -79,16 +73,11 @@ function Index() {
             <section ref={section2Ref} className='flex h-screen snap-start relative py-8
             lg:flex-row-reverse lg:w-full lg:overflow-hidden'>
                 <div className='absolute lg:relative top-0 inset-x-0 flex justify-center lg:w-1/4 lg:items-center'>
-                    <motion.img
-                        src={Mandala}
-                        alt=""
-                        width={1130.73}
-                        height={1130.74}
-                        loading='lazy'
-                        className={`
-                        scale-75 md:scale-40 lg:scale-300
-                        translate-y-[-50%] lg:translate-x-[95%] lg:translate-y-0`}
-
+                    <MotionMandala
+                        className="
+                            scale-75 md:scale-40 lg:scale-300
+                            translate-y-[-50%] lg:translate-y-0 lg:translate-x-[95%]"
+                        
                         animate={{ rotate: 360 }}
                         transition={{ 
                             duration: 30,
