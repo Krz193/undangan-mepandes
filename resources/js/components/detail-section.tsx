@@ -7,6 +7,9 @@ import { MapPin } from 'lucide-react';
 const MotionMandala = motion.create(Mandala);
 
 const DetailSection = forwardRef<HTMLElement>((props, ref) => {
+    const mochiPath = window.location.pathname;
+    const isMochi = mochiPath === '/mepandes-mochi';
+    
     return (
         <section ref={ref}  className='flex h-screen snap-start relative py-8
         lg:flex-row-reverse lg:w-full lg:overflow-hidden'>
@@ -30,9 +33,18 @@ const DetailSection = forwardRef<HTMLElement>((props, ref) => {
             lg:top-0 lg:w-3/4 lg:h-screen lg:justify-center lg:gap-10'>
                 <div className='flex flex-col items-center text-center font-cursive text-gold capitalize
                 '>
-                    <span className='text-5xl md:text-7xl lg:text-[6rem]'>i gede krusiawan budi</span>
-                    <span className='text-8xl text-light-gold'>&</span>
-                    <span className='text-5xl md:text-7xl lg:text-[6rem]'>ni made krusita budi</span>
+                    { isMochi ? (
+                        <span className='flex flex-col gap-3'>
+                            <span className='text-3xl md:text-5xl lg:text-[4rem] text-light-gold'>your beloved hubby</span>
+                            <span className='text-5xl md:text-7xl lg:text-[6rem]'>i gede krusiawan budi</span>
+                        </span>
+                    ) : (
+                        <span className='flex flex-col'>
+                            <span className='text-5xl md:text-7xl lg:text-[6rem]'>i gede krusiawan budi</span>
+                            <span className='text-8xl text-light-gold'>&</span>
+                            <span className='text-5xl md:text-7xl lg:text-[6rem]'>ni made krusita budi</span>
+                        </span>
+                    )}
                 </div>
 
                 <div className='lg:flex lg:flex-col-reverse lg:justify-center lg:items-center lg:gap-8 lg:w-full'>

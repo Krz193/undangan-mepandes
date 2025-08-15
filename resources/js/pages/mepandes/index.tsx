@@ -13,7 +13,11 @@ function Index() {
     const handleScroll = () => {
         section2Ref.current?.scrollIntoView({behavior: 'smooth'})
     }
+    const mochiPath = window.location.pathname;
+    const isMochi = mochiPath === '/mepandes-mochi';
 
+    console.log('isMochi', isMochi);
+    console.log('url', mochiPath);
 
     return (
         <div className='w-full h-screen px-4 lg:px-0 bg-background overflow-y-scroll scrollbar-hidden scroll-smooth snap-y snap-mandatory relative overflow-x-hidden'>
@@ -48,7 +52,7 @@ function Index() {
                     <header className='text-center flex flex-col items-center'>
                         <h1 className='h1 font-secondary text-2xl tracking-[.35em] capitalize text-light-gold relative bottom-[-1.25rem]
                         lg:bottom-[-1.75rem]'>
-                            undangan
+                            {isMochi ? 'special invitation' : 'undangan'}
                         </h1>
                         <p className='font-cursive text-9xl lg:text-[15rem] xs capitalize text-gold'>mepandes</p>
                     </header>
