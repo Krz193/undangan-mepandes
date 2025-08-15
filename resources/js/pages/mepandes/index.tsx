@@ -1,5 +1,5 @@
 import { MapPin } from 'lucide-react'
-import React, {  useRef } from 'react'
+import React, { useRef, lazy, Suspense} from 'react'
 import Mandala from '@/components/mandala';
 import MandalaAtas from '@/components/mandala-atas';
 import MandalaBawah from '@/components/mandala-bawah';
@@ -7,6 +7,7 @@ import { ArrowDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const MotionMandala = motion.create(Mandala);
+const DetailSection = lazy(() => import('@/components/detail-section'));
 
 function Index() {
     const section2Ref = useRef<HTMLElement>(null);
@@ -132,6 +133,10 @@ function Index() {
                     </div>
                 </div>
             </section>
+
+            <Suspense fallback={ <div>Loading...</div> }>
+                <DetailSection ref={section2Ref}/>
+            </Suspense>
         </div>
     )
 }
