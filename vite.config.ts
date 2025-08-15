@@ -14,7 +14,7 @@ export default defineConfig({
         }),
         react(),
         tailwindcss(),
-        visualizer({ open: true }),
+        visualizer({ open: false }),
     ],
     esbuild: {
         jsx: 'automatic',
