@@ -54,7 +54,13 @@ function Index() {
                         lg:bottom-[-1.75rem]'>
                             {isMochi ? 'special invitation' : 'undangan'}
                         </h1>
-                        <p className='font-cursive text-9xl lg:text-[15rem] xs capitalize text-gold'>mepandes</p>
+                        <p className='font-cursive text-9xl lg:text-[15rem] capitalize text-gold'>mepandes</p>
+                        { isMochi &&
+                            <h1 className='h1 font-secondary text-2xl tracking-[.35em] capitalize text-light-gold relative
+                            '>
+                                for my sweetheart olintia
+                            </h1>
+                        }
                     </header>
                     <MandalaBawah
                         className='w-1/2 lg:w-[35%]'
