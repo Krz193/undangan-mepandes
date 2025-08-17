@@ -6,6 +6,8 @@ use Inertia\Inertia;
 Route::get('/mepandes', fn () => Inertia::render('mepandes/index'))->name('mepandes');
 Route::get('/mepandes-mochi', fn () => Inertia::render('mepandes/index'))->name('mepandes.mochi');
 
+route::get('/', fn () => to_route('mepandes') );
+
 
 // Route::get('/{any}', fn () => to_route('mepandes'))->where('any', '.*');
 
