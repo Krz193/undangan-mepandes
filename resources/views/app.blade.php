@@ -60,7 +60,8 @@
 
         @routes
         @viteReactRefresh
-        @vite(['resources/js/app.tsx', "resources/js/pages/{$page['component']}.tsx"])
+        {{-- @vite(['resources/js/app.tsx', "resources/js/pages/{$page['component']}.tsx"]) --}}
+        @vite(['resources/js/app.tsx', "resources/js/pages/app.tsx"])
         @inertiaHead
     </head>
     <body class="flex flex-col font-sans antialiased"  style="scrollbar-width: thin">
