@@ -4,19 +4,6 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="preload"
-            href={{ Vite::asset('resources/assets/fonts/PassionsConflict-Regular.woff2') }}
-            as="font"
-            type="font/woff2"
-            crossorigin
-        >
-        <link rel="preload"
-            href={{ Vite::asset('resources/assets/fonts/AnticDidone-Regular.woff2') }}
-            as="font"
-            type="font/woff2"
-            crossorigin
-        >
-
         {{-- Inline script to detect system dark mode preference and apply it immediately --}}
         <script>
             (function() {
@@ -45,32 +32,19 @@
 
         <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
-        {{-- <link rel="icon" href="/favicon.ico" sizes="any"> --}}
-        {{-- <link rel="icon" href="/favicon.svg" type="image/svg+xml"> --}}
-        {{-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> --}}
+        <link rel="icon" href="/favicon.ico" sizes="any">
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-
-        {{-- <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" /> --}}
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
         @routes
         @viteReactRefresh
-        {{-- @vite(['resources/js/app.tsx', "resources/js/pages/{$page['component']}.tsx"]) --}}
-        @vite(['resources/js/app.tsx', "resources/js/pages/app.tsx"])
+        @vite(['resources/js/app.tsx'])
         @inertiaHead
     </head>
-    <body class="flex flex-col font-sans antialiased"  style="scrollbar-width: thin">
+    <body class="font-sans antialiased">
         @inertia
     </body>
-    {{-- <footer class="mt-auto text-center py-0.5 text-sm text-gray-500 dark:text-gray-400">
-        <p>
-            © {{ date('Y') }} {{ config('app.name', 'Laravel') }}.
-            Made by <a href="https://eivern.com/" target="_blank" rel="noopener noreferrer" class="text-gold">Eivern</a>.
-        </p>
-    </footer> --}}
 </html>
